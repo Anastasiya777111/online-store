@@ -10,7 +10,7 @@ const FalseAuth = () => {
         <Nav className="ml-auto" style={{color: "white"}}>
             <BasketNavBar/>
             <NavLink to={LOGIN_ROUTE}>
-                <Button variant={"outline-light"}>Авторизация</Button>
+                <Button variant={"outline-light"}>Authorization</Button>
             </NavLink>
         </Nav>
     );

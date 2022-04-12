@@ -7,6 +7,7 @@ const userRouter = require('./userRouter');
 const basketRouter = require('./basketRouter');
 const ratingRouter = require('./ratingRouter');
 const ordersRouter = require('./ordersRouter');
+const deviceInfoRouter = require('./deviceInfoRouter');
 
 router.use('/user', userRouter)
 router.use('/type', typeRouter)
@@ -15,5 +16,6 @@ router.use('/device', deviceRouter)
 router.use('/basket', basketRouter)
 router.use('/rating', ratingRouter)
 router.use('/orders', ordersRouter)
+router.use('/deviceInfo', deviceInfoRouter)
 
 module.exports = router;

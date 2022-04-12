@@ -15,7 +15,15 @@ const TrueAuth = () => {
         localStorage.removeItem('token');
         basket.resetBasket();
     }
-
+if(user.User.role==="ADMIN"){
+    let adminPanel = <Button
+    className={"mr-3"}
+    variant={"outline-light"}
+    onClick={() => {history.push(ADMIN_ROUTE)}}
+>
+    Admin panel
+</Button>
+}
     return (
         <Nav className="ml-auto" style={{color: "white"}}>
             <BasketNavBar/>
@@ -24,21 +32,25 @@ const TrueAuth = () => {
                 variant={"outline-light"}
                 onClick={() => {history.push(ORDERS_ROUTE)}}
             >
-                Заказы
+                Orders
             </Button>}
 
-            <Button
+            {
+               user.User.role === "ADMIN" ? <Button
                 className={"mr-3"}
                 variant={"outline-light"}
                 onClick={() => {history.push(ADMIN_ROUTE)}}
             >
-                Админ панель
-            </Button>
+                Admin panel
+            </Button> : <></>
+            } 
+            
+            
             <Button
                 variant={"outline-light"}
                 onClick={() => logOut()}
             >
-                Выйти
+                Log off
             </Button>
         </Nav>
     );

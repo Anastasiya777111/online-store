@@ -13,9 +13,9 @@ const NavBar = observer(() => {
     const {user} = useContext(Context);
 
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar style={{backgroundColor: "#65829f"}}>
             <Container>
-                <NavLink style={{color: "white"}} to={SHOP_ROUTE}>e-Store</NavLink>
+                <NavLink style={{color: "white", fontSize: "24px"}} to={SHOP_ROUTE}>E-STORE</NavLink>
                 {user.isAuth ? <TrueAuth/> : <FalseAuth/>}
             </Container>
         </Navbar>

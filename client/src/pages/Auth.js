@@ -40,6 +40,7 @@ const Auth = observer(() => {
                 <h2 className="m-auto">{isLogin ? "Authorization" : "Registration"}</h2>
                 <Form className="d-flex flex-column">
                     <Form.Control
+                    type='email'
                         className="mt-3"
                         placeholder="Input your Email..."
                         value={email}
