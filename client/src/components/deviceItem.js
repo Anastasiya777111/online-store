@@ -12,10 +12,10 @@ const DeviceItem = ({device}) => {
         <Col md={3} className="mt-3" onClick={() => history.push(DEVICE_ROUTE + '/' + device.id)}>
             <Card
                 className="p-2"
-                style={{width: "190px", minHeight: "190px", cursor: "pointer"}}
+                style={{width: "190px", minHeight: "200px", cursor: "pointer"}}
                 border={"Light"}
             >
-                <Image style={{width: "130px"}} src={process.env.REACT_APP_API_URL + device.img}/>
+                <Image style={{width: "100%", height: "140px"}} src={process.env.REACT_APP_API_URL + device.img}/>
                 <div className="d-flex justify-content-between align-items-center mt-2">
                     <div className="text-black-50">{device && device.brand.name}</div>
                     <div className="d-flex align-items-center">

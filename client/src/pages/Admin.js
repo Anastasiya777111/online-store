@@ -106,7 +106,7 @@ const Admin = () => {
                 variant="outline-dark"
                 className="mt-4 p-2"
             >
-                Delete type of brand
+                Delete type or brand
             </Button>
             <CreateDevice show={deviceVisible} onHide={() => setDeviceVisible(false)}/>
             <CreateBrand show={brandVisible} onHide={() => setBrandVisible(false)}/>
